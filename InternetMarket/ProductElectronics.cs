@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InternetMarket
 {
-    public class Product
+    public abstract class ProductElectronics
     {
         public string Category { get; set; }
         public string Model { get; set; }
@@ -19,27 +19,30 @@ namespace InternetMarket
         }
         public void DoAddPrice(string Category)
         {
-            int result = 0;
             Console.WriteLine("Укажите количество товаров");
             int count = int.Parse(Console.ReadLine());
             Console.WriteLine();
+            int result;
             if (Category == "Smartphone" || Category == "smartphone" && count >= 5)
             {
-                result = (Price * count) - (Price / 100 * 7);
+                result = Price * count - Price / 100 * 7;
+                Console.WriteLine(result);
             }
             if (Category == "Tablet" || Category == "tablet" && count >= 5)
             {
-                result = (Price * count) - (Price / 100 * 9);
+                result = Price * count - Price / 100 * 9;
+                Console.WriteLine(result);
             }
             if (Category == "Laptop" || Category == "laptop" && count >= 5)
             {
-                result = (Price * count) - (Price / 100 * 5);
+                result = Price * count - Price / 100 * 5;
+                Console.WriteLine(result);
             }
-            else
+            if (count < 5)
             {
                 result = Price * count;
+                Console.WriteLine(result);
             }
-            Console.WriteLine(result);
         }
     }
 }

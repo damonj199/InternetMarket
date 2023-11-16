@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace InternetMarket
 {
-    public class Smartphone: Product
+    public class TabletElectronics : ProductElectronics
     {
         public double Camera { get; set; }
+        public bool Stylus { get; set; }
     }
 }

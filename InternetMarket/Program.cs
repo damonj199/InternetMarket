@@ -1,6 +1,6 @@
 ﻿using InternetMarket;
 
-Smartphone samsung = new Smartphone() { };
+SmartphoneElectronics samsung = new SmartphoneElectronics() { };
 samsung.Category = "smartphone";
 samsung.Model = "Samsung S 23 Ultra";
 samsung.Camera = 45.0;
@@ -11,7 +11,7 @@ samsung.Memory = 256;
 samsung.DoInf();
 samsung.DoAddPrice(samsung.Category);
 
-Smartphone iphon = new Smartphone() { };
+SmartphoneElectronics iphon = new SmartphoneElectronics() { };
 iphon.Category = "smartphone";
 iphon.Model = "13 Pro";
 iphon.Camera = 44.0;
@@ -22,12 +22,12 @@ iphon.Memory = 256;
 iphon.DoInf();
 iphon.DoAddPrice(iphon.Category);
 
-Laptop lenovo = new Laptop() { };
+LaptopElectronics lenovo = new LaptopElectronics() { };
 lenovo.Category = "laptop";
 lenovo.Model = "IdeaPad 5";
 lenovo.Akkum = 7.5;
 lenovo.Diagonal = 15.6;
-lenovo.Price = 64454;
+lenovo.Price = 65454;
 lenovo.Memory = 512;
 
 lenovo.DoInf();
